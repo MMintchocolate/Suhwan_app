@@ -9,5 +9,5 @@ class DiaryListCreateAPIView(generics.ListCreateAPIView):
 
 # 2. 특정 일기를 상세히 보고(Retrieve), 수정하고(Update), 삭제하는(Destroy) 뷰
 class DiaryDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Diary.objects.all()
-    serializer_class = DiarySerializer
+    queryset = Diary.objects.all() # 파이썬 객체 집합 일 뿐 react 가 읽지 못함 
+    serializer_class = DiarySerializer # JSON 형식의 문자열로 번역
