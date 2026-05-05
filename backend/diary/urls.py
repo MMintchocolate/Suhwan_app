@@ -5,6 +5,6 @@ from . import views
 
 urlpatterns = [
     path('', views.diary_list, name='diary-list'),
-    
     path('<int:pk>/', views.diary_detail, name='diary-detail'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('<int:pk>/update/', views.diary_update, name = "diary-update"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

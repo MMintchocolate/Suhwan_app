@@ -32,6 +32,11 @@ export default function App() {
           options={{ title: '일기 상세' }}
         />
 
+        <Stack.Screen
+          name="DiaryUpdate"
+          component={DiaryEditScreen}
+          options={{ title: '일기 수정' }}
+        />
 
       </Stack.Navigator>
     </NavigationContainer>

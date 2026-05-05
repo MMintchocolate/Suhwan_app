@@ -22,10 +22,35 @@ export const fetchDiariesDetail = async (id) => {
   try {
     const url = API_URLS.DIARY_DETAIL(id);
     const response = await api.get(url)
+    console.log("전체 데이터:", response.data);
     return response.data
   }
   catch (error) {
 
     console.error("세부 내용을 불러오지 못했습니다.", error)
+  }
+};
+
+// 세부 일기 수정 삭제 하기
+export const fetchDiariesUpdate = async (id) => {
+  try {
+    const url = API_URLS.DIARY_UPDATE(id); s
+    console.log("수정 데이터:", response.data);
+    return response.data
+  }
+  catch (error) {
+
+    console.error("세부 내용을 불러오지 못했습니다.", error)
+  }
+};
+
+// 수정화면 진입 시 기존 데이터 가져오는 함수
+export const fetchDiaryForEdit = async (id) => {
+  try {
+    const url = API_URLS.DIARY_UPDATE(id); // 장고의 diary_update 뷰 연결
+    const response = await api.get(url);
+    return response.data; // 기존 일기 데이터(instance) 반환
+  } catch (error) {
+    console.error("수정용 데이터를 불러오지 못했습니다.", error);
   }
 };

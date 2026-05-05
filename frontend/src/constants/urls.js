@@ -2,4 +2,5 @@
 export const API_URLS = {
   DIARY_LIST: '/diary/',
   DIARY_DETAIL: (id) => `/diary/${id}/`,
+  DIARY_UPDATE: (id) => `/diary/${id}/`,
 };

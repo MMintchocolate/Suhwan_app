@@ -26,9 +26,14 @@ export default function DiaryDetailScreen({ route, navigation }) {
   }
   return (
     <ScrollView style={styles.container}>
-      {diary.image_url && (
+      <TouchableOpacity
+        onPress={() => navigation.navigate('DiaryUpdate', { diary: diary })} // 전체 객체 전달
+      >
+        <Text>수정하기</Text>
+      </TouchableOpacity>
+      {diary.image && (
         <Image
-          source={{ uri: `http://10.0.2.2:8000${diary.image_url}` }}
+          source={{ uri: diary.image }} // 로그에 이미 http://10.0.2.2...가 찍혔다면 이것만 쓰세요!
           style={styles.image}
         />
       )}
