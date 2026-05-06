@@ -29,7 +29,7 @@ export default function DiaryDetailScreen({ route, navigation }) {
       <TouchableOpacity
         onPress={() => navigation.navigate('DiaryUpdate', { diary: diary })} // 전체 객체 전달
       >
-        <Text>수정하기</Text>
+        <Text>수정하기s</Text>
       </TouchableOpacity>
       {diary.image && (
         <Image
